@@ -12,6 +12,7 @@ import com.example.usuario.habittracker.data.HabitsDbHelper;
 public class CatalogActivity extends AppCompatActivity {
 
     HabitsDbHelper mDbHelper;
+    Cursor cursor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,14 +47,7 @@ public class CatalogActivity extends AppCompatActivity {
                 HabitsContract.HabitsEntry.COLUMN_SPORT,};
 
         // Perform a query on the user,s habit table
-        Cursor cursor = db.query(
-                HabitsContract.HabitsEntry.TABLE_NAME,   // The table to query
-                projection,            // The columns to return and the conditional filters if wanted.
-                null,                  // The columns for the WHERE clause
-                null,                  // The values for the WHERE clause
-                null,                  // Don't group the rows
-                null,                  // Don't filter by row groups
-                null);                   // The sort order
+        Cursor cursor = db.query(HabitsContract.HabitsEntry.TABLE_NAME, projection, null, null, null, null, null);
     }
 
     /**
