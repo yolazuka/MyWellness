@@ -44,7 +44,8 @@ public class CatalogActivity extends AppCompatActivity {
                 HabitsContract.HabitsEntry.COLUMN_DATE,
                 HabitsContract.HabitsEntry.COLUMN_SLEEP,
                 HabitsContract.HabitsEntry.COLUMN_FRUIT,
-                HabitsContract.HabitsEntry.COLUMN_SPORT,};
+                HabitsContract.HabitsEntry.COLUMN_SPORT
+        };
 
         // Perform a query on the user,s habit table
         Cursor cursor = db.query(HabitsContract.HabitsEntry.TABLE_NAME, projection, null, null, null, null, null);
