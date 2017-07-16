@@ -9,14 +9,14 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 
 
-
 // Here I create a subclass extended from SQLiteOpenHelper that override the methods onCreate and upOnGrade
 public class HabitsDbHelper extends SQLiteOpenHelper {
 
-
     public static final String LOG_TAG = HabitsDbHelper.class.getSimpleName();
 
-    /** Name of the database file */
+    /**
+     * Name of the database file
+     */
     private static final String DATABASE_NAME = "myhabits.db";
 
     /**
@@ -39,12 +39,13 @@ public class HabitsDbHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         // Create a String that contains the SQL statement to create the habits table
-        String SQL_CREATE_HABITS_TABLE =  "CREATE TABLE " + HabitsContract.HabitsEntry.TABLE_NAME + " ("
-                + HabitsContract.HabitsEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + HabitsContract.HabitsEntry.COLUMN_DATE + "INTEGER NOT NULL, "
-                + HabitsContract.HabitsEntry.COLUMN_SLEEP + " INTEGER NOT NULL, "
-                + HabitsContract.HabitsEntry.COLUMN_FRUIT + " INTEGER NOT NULL, "
-                + HabitsContract.HabitsEntry.COLUMN_SPORT + " TEXT);";
+        String SQL_CREATE_HABITS_TABLE =
+                "CREATE TABLE " + HabitsContract.HabitsEntry.TABLE_NAME + " ("
+                        + HabitsContract.HabitsEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                        + HabitsContract.HabitsEntry.COLUMN_DATE + " INTEGER NOT NULL, "
+                        + HabitsContract.HabitsEntry.COLUMN_SLEEP + " INTEGER NOT NULL, "
+                        + HabitsContract.HabitsEntry.COLUMN_FRUIT + " INTEGER NOT NULL, "
+                        + HabitsContract.HabitsEntry.COLUMN_SPORT + " TEXT" + " ); ";
 
         // Execute the SQL statement
         db.execSQL(SQL_CREATE_HABITS_TABLE);

@@ -1,13 +1,10 @@
-package com.example.usuario.habittracker;
+package com.example.usuario.habittracker.data;
 
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-
-import com.example.usuario.habittracker.data.HabitsContract;
-import com.example.usuario.habittracker.data.HabitsDbHelper;
 
 public class CatalogActivity extends AppCompatActivity {
 
@@ -48,7 +45,14 @@ public class CatalogActivity extends AppCompatActivity {
         };
 
         // Perform a query on the user,s habit table
-        Cursor cursor = db.query(HabitsContract.HabitsEntry.TABLE_NAME, projection, null, null, null, null, null);
+        Cursor cursor = db.query(
+                HabitsContract.HabitsEntry.TABLE_NAME,
+                projection,
+                null,
+                null,
+                null,
+                null,
+                null);
     }
 
     /**
@@ -61,9 +65,8 @@ public class CatalogActivity extends AppCompatActivity {
         // Create a ContentValues object where column names are the keys,
         // and the date, amount of sleep hours, pieces of fruit and yoga practicing are the values.
         ContentValues values = new ContentValues();
-        values.put(HabitsContract.HabitsEntry._ID, "4");
+
         values.put(HabitsContract.HabitsEntry.COLUMN_DATE, "01/07/2017");
-        values.put(HabitsContract.HabitsEntry.COLUMN_SLEEP, "4");
         values.put(HabitsContract.HabitsEntry.COLUMN_SLEEP, "4");
         values.put(HabitsContract.HabitsEntry.COLUMN_FRUIT, "5");
         values.put(HabitsContract.HabitsEntry.COLUMN_SPORT, "Basket");
