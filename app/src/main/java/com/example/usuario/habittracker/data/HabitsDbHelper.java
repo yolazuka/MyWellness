@@ -38,16 +38,15 @@ public class HabitsDbHelper extends SQLiteOpenHelper {
      */
     @Override
     public void onCreate(SQLiteDatabase db) {
-        // Create a String that contains the SQL statement to create the habits table
-        String SQL_CREATE_HABITS_TABLE =
-                "CREATE TABLE " + HabitsContract.HabitsEntry.TABLE_NAME + " ("
-                        + HabitsContract.HabitsEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                        + HabitsContract.HabitsEntry.COLUMN_DATE + " INTEGER NOT NULL, "
-                        + HabitsContract.HabitsEntry.COLUMN_SLEEP + " INTEGER NOT NULL, "
-                        + HabitsContract.HabitsEntry.COLUMN_FRUIT + " INTEGER NOT NULL, "
-                        + HabitsContract.HabitsEntry.COLUMN_SPORT + " TEXT" + " ); ";
+// Create a String that contains the SQL statement to create the habits table
+        String SQL_CREATE_HABITS_TABLE = "CREATE TABLE " + HabitsContract.HabitsEntry.TABLE_NAME + " ("
+                + HabitsContract.HabitsEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + HabitsContract.HabitsEntry.COLUMN_DATE + " INTEGER NOT NULL, "
+                + HabitsContract.HabitsEntry.COLUMN_SLEEP + " INTEGER NOT NULL, "
+                + HabitsContract.HabitsEntry.COLUMN_FRUIT + " INTEGER NOT NULL, "
+                + HabitsContract.HabitsEntry.COLUMN_SPORT + " TEXT" + " ); ";
 
-        // Execute the SQL statement
+// Execute the SQL statement
         db.execSQL(SQL_CREATE_HABITS_TABLE);
     }
 
