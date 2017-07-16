@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">My Wellness</string>
+
+    <!-- Label for overflow menu option that inserts the user habits into the table -->
+
+    <string name="action_insert_habits_data">Insert your habits today</string>
+
+    <string name="action_delete_all_entries">Delete All your habits</string>
+
+    <!-- Label for editor menu option to save the user habits -->
+    <string name="action_save">Save</string>
+
+    <!-- Label for editor overflow menu option in order to delete the current habit registered -->
+    <string name="action_delete">Delete</string>
+
+    <!-- Questions on the editor_activity.xml to add the habits to the table -->
+
+    <string name="sleep">How many hours did you sleep last night?</string>
+
+    <string name="fruit">How many pieces of fruit have you eaten today ?</string>
+
+    <string name="yoga">How much Yoga have you practiced today?( In hours )</string>
+
+
+
+</resources>
