@@ -30,7 +30,7 @@ public class CatalogActivity extends AppCompatActivity {
      * Temporary helper method to display information and get the data readable through the
      * method getReadableDatabase
      */
-    private void displayDatabaseInfo() {
+    private Cursor displayDatabaseInfo() {
         // Create and/or open a database to read from it
         SQLiteDatabase db = mDbHelper.getReadableDatabase();
 
